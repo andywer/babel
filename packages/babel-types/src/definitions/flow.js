@@ -237,6 +237,7 @@ defineType("TypeAlias", {
 });
 
 defineType("TypeAnnotation", {
+  builder: ["typeAnnotation"],
   visitor: ["typeAnnotation"],
   aliases: ["Flow"],
   fields: {
