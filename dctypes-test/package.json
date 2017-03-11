@@ -8,8 +8,8 @@
   "dependencies": {
     "babel-cli": "../packages/babel-cli",
     "babel-plugin-flow-runtime": "^0.8.0",
-    "babel-plugin-transform-dctypes-comments": "../../babel-plugin-transform-dctypes-comments",
-    "babel-plugin-transform-dctypes-to-flow": "../../babel-plugin-transform-dctypes-to-flow",
+    "babel-plugin-transform-dctypes-comments": "../packages/babel-plugin-transform-dctypes-comments",
+    "babel-plugin-transform-dctypes-to-flow": "../packages/babel-plugin-transform-dctypes-to-flow",
     "babel-plugin-transform-flow-strip-types": "^6.22.0"
   }
 }

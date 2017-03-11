@@ -1,0 +1,7 @@
+{
+  "name": "babel-plugin-syntax-dctypes",
+  "version": "0.0.0",
+  "dependencies": {
+    "babel-plugin-syntax-flow": "^6.18.0"
+  }
+}
