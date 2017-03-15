@@ -4,7 +4,7 @@ import codeFrame from "babel-code-frame";
 import traverse from "../index";
 import NodePath from "./index";
 import { parse } from "babylon";
-import * as t from "babel-types";
+import * as t from "@andywer/babel-types-dctypes";
 
 const hoistVariablesVisitor = {
   Function(path) {

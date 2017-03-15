@@ -1,5 +1,5 @@
 {
-  "name": "babel-cli",
+  "name": "@andywer/babel-cli-dctypes",
   "version": "7.0.0-alpha.1",
   "description": "Babel command line.",
   "author": "Sebastian McKenzie <sebmck@gmail.com>",
@@ -16,8 +16,8 @@
     "compiler"
   ],
   "dependencies": {
-    "babel-core": "7.0.0-alpha.1",
-    "babel-register": "7.0.0-alpha.1",
+    "@andywer/babel-core-dctypes": "7.0.0-alpha.1",
+    "@andywer/babel-register-dctypes": "7.0.0-alpha.1",
     "babel-polyfill": "7.0.0-alpha.1",
     "commander": "^2.8.1",
     "convert-source-map": "^1.1.0",

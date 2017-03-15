@@ -1,5 +1,5 @@
 {
-  "name": "babel-types",
+  "name": "@andywer/babel-types-dctypes",
   "version": "7.0.0-alpha.1",
   "description": "Babel Types is a Lodash-esque utility library for AST nodes",
   "author": "Sebastian McKenzie <sebmck@gmail.com>",

@@ -1,6 +1,6 @@
 import type NodePath from "../index";
-import { react } from "babel-types";
-import * as t from "babel-types";
+import { react } from "@andywer/babel-types-dctypes";
+import * as t from "@andywer/babel-types-dctypes";
 
 export const ReferencedIdentifier = {
   types: ["Identifier", "JSXIdentifier"],

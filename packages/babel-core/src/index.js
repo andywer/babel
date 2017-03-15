@@ -17,7 +17,7 @@ export { messages };
 import * as t from "babel-types";
 export { t as types };
 
-import traverse from "babel-traverse";
+import traverse from "@andywer/babel-traverse-dctypes";
 export { traverse };
 
 import OptionManager from "./transformation/file/options/option-manager";

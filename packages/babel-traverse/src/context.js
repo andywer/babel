@@ -1,5 +1,5 @@
 import NodePath from "./path";
-import * as t from "babel-types";
+import * as t from "@andywer/babel-types-dctypes";
 
 const testing = process.env.NODE_ENV === "test";
 

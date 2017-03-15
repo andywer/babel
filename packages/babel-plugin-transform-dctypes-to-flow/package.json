@@ -1,8 +1,8 @@
 {
-  "name": "babel-plugin-transform-dctypes-to-flow",
-  "version": "0.0.0",
+  "name": "@andywer/babel-plugin-transform-dctypes-to-flow",
+  "version": "0.1.0",
   "main": "src/index.js",
   "dependencies": {
-    "babel-plugin-syntax-dctypes": "../babel-plugin-syntax-dctypes"
+    "@andywer/babel-plugin-syntax-dctypes": "^0.1.0"
   }
 }

@@ -3,7 +3,7 @@
 import fs        from "fs";
 import commander from "commander";
 import kebabCase from "lodash/kebabCase";
-import { options, util, version } from "babel-core";
+import { options, util, version } from "@andywer/babel-core-dctypes";
 import uniq      from "lodash/uniq";
 import glob      from "glob";
 

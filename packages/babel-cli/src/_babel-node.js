@@ -3,11 +3,11 @@ import Module from "module";
 import { inspect } from "util";
 import path from "path";
 import repl from "repl";
-import { util } from "babel-core";
-import * as babel from "babel-core";
+import { util } from "@andywer/babel-core-dctypes";
+import * as babel from "@andywer/babel-core-dctypes";
 import vm from "vm";
 import "babel-polyfill";
-import register from "babel-register";
+import register from "@andywer/babel-register-dctypes";
 
 import pkg from "../package.json";
 

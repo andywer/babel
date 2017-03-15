@@ -1,7 +1,7 @@
 import OptionManager from "./file/options/option-manager";
 import * as messages from "babel-messages";
 import Store from "../store";
-import traverse from "babel-traverse";
+import traverse from "@andywer/babel-traverse-dctypes";
 import clone from "lodash/clone";
 
 const GLOBAL_VISITOR_PROPS = ["enter", "exit"];

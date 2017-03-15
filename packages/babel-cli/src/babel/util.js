@@ -1,7 +1,7 @@
 import commander from "commander";
 import defaults from "lodash/defaults";
 import readdir from "fs-readdir-recursive";
-import * as babel from "babel-core";
+import * as babel from "@andywer/babel-core-dctypes";
 import path from "path";
 import fs from "fs";
 

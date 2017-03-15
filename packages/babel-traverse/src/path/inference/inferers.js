@@ -1,4 +1,4 @@
-import * as t from "babel-types";
+import * as t from "@andywer/babel-types-dctypes";
 
 export { default as Identifier } from "./inferer-reference";
 

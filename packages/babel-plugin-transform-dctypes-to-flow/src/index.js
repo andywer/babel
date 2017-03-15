@@ -1,4 +1,4 @@
-const syntaxDCTypes = require('babel-plugin-syntax-dctypes')
+const syntaxDCTypes = require('@andywer/babel-plugin-syntax-dctypes')
 
 module.exports = babelPluginDCTypesToFlow
 

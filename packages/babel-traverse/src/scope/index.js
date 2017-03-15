@@ -7,7 +7,7 @@ import defaults from "lodash/defaults";
 import * as messages from "babel-messages";
 import Binding from "./binding";
 import globals from "globals";
-import * as t from "babel-types";
+import * as t from "@andywer/babel-types-dctypes";
 import { scope as scopeCache } from "../cache";
 
 // Number of calls to the crawl method to figure out whether we're

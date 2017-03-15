@@ -1,6 +1,6 @@
 import type NodePath from "./index";
 import * as inferers from "./inferers";
-import * as t from "babel-types";
+import * as t from "@andywer/babel-types-dctypes";
 
 /**
  * Infer the type of the current `NodePath`.
