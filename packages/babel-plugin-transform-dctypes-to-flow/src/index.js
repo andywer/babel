@@ -62,6 +62,12 @@ function findSiblingDeclarationNode (path, idNode) {
     if (sibling.type === 'VariableDeclaration') {
       const matchingDecl = sibling.declarations.find(decl => decl.id && decl.id.name === idNode.name)
       return matchingDecl || null
+    } else if (sibling.type === 'ExportDefaultDeclaration' || sibling.type === 'ExportNamedDeclaration') {
+      if (sibling.declaration && sibling.declaration.id) {
+        return sibling.declaration.id.name === idNode.name ? sibling.declaration : null
+      } else {
+        return null
+      }
     } else {
       return sibling.id && sibling.id.name === idNode.name
         ? sibling
