@@ -2,8 +2,38 @@ const syntaxDCTypes = require('@andywer/babel-plugin-syntax-dctypes')
 
 module.exports = babelPluginDCTypesToFlow
 
+exports.findSiblingDeclarationNode = findSiblingDeclarationNode
+
 function babelPluginDCTypesToFlow ({ types }) {
-  const typeDeclarationVisitors = {
+  return {
+    inherits: syntaxDCTypes,
+
+    visitor: {
+      Program (path) {
+        const FLOW_DIRECTIVE = '@flow'
+        const { body } = path.node
+
+        let typeDeclarations = 0
+        const typeDeclarationVisitors = createTypeDeclarationVisitors(types, () => typeDeclarations++)
+
+        // Do a `path.traverse()` here, instead of adding it to the plugin's main visitor property.
+        // So we make sure that all these conversions are done before other plugins are run.
+        path.traverse(typeDeclarationVisitors)
+
+        if (body.length > 0 && typeDeclarations > 0) {
+          const { leadingComments = [] } = body[0]
+
+          if (leadingComments.every(comment => comment.value.indexOf(FLOW_DIRECTIVE) === -1)) {
+            path.addComment('leading', ' @flow ')
+          }
+        }
+      }
+    }
+  }
+}
+
+function createTypeDeclarationVisitors (types, onVisit) {
+  return {
     TypeDeclaration (path) {
       const { id, typeAnnotation } = path.node
 
@@ -17,29 +47,7 @@ function babelPluginDCTypesToFlow ({ types }) {
       }
 
       mergeTypeIntoDeclaration(types, path, typeAnnotation, declarationNode, id.name)
-    }
-  }
-
-  return {
-    inherits: syntaxDCTypes,
-
-    visitor: {
-      Program (path) {
-        const FLOW_DIRECTIVE = '@flow'
-        const { body } = path.node
-
-        if (body.length > 0) {
-          const { leadingComments = [] } = body[0]
-
-          if (leadingComments.every(comment => comment.value.indexOf(FLOW_DIRECTIVE) === -1)) {
-            path.addComment('leading', ' @flow ')
-          }
-        }
-
-        // Do a `path.traverse()` here, instead of adding it to the plugin's main visitor property.
-        // So we make sure that all these conversions are done before other plugins are run.
-        path.traverse(typeDeclarationVisitors)
-      }
+      onVisit(path)
     }
   }
 }
