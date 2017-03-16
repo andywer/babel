@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "src/index.js",
   "dependencies": {
-    "@andywer/babel-plugin-syntax-dctypes": "^0.1.0"
+    "@andywer/babel-plugin-syntax-dctypes": "^0.1.0",
+    "@andywer/babel-plugin-transform-dctypes-to-flow": "^0.1.0"
   }
 }
