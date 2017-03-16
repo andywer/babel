@@ -1,8 +1,7 @@
 const syntaxDCTypes = require('@andywer/babel-plugin-syntax-dctypes')
 
 module.exports = babelPluginDCTypesToFlow
-
-exports.findSiblingDeclarationNode = findSiblingDeclarationNode
+module.exports.findSiblingDeclarationNode = findSiblingDeclarationNode
 
 function babelPluginDCTypesToFlow ({ types }) {
   return {
